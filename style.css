@@ -1,0 +1,181 @@
+/* Style for the body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: #fff;
+}
+
+/* Style for the loginContainer */
+/* .loginContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin: 100px;
+  padding: 20px;
+  width: 400px;
+} */
+
+#signin-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #333;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  margin: 100px;
+  padding: 20px;
+  margin-left: 35%;
+  width: 400px;
+}
+
+.loginContainer p {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
+#signup-email,
+#signup-password {
+  margin: 10px;
+  padding: 10px;
+  width: 300px;
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  color: #333;
+}
+
+.sign-in-google,
+#btnlog {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #008cba;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sign-in-google:hover,
+#btnlog:hover {
+  background-color: #005a80;
+}
+
+.sign-in-google:active,
+#btnlog:active {
+  background-color: #003147;
+}
+
+/* Style for the formContainer */
+.formContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.formContainer img {
+  width: 105%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+p{
+  font-family: 'Courier New', Courier, monospace;
+}
+
+#form1,
+#form2,
+#form3,
+#form4,
+#form5 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 10px;
+  padding: 20px;
+  width: 450px;
+}
+
+#form1 button,
+#form2 button,
+#form3 button,
+#form4 button,
+#form5 button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #008cba;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+#form1 input,
+#form2 input,
+#form3 input,
+#form4 input,
+#form5 input {
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  border: none;
+  background-color: #eee;
+  color: #333;
+}
+
+#form1:hover,
+#form2:hover,
+#form3:hover,
+#form4:hover,
+#form5:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.1);
+}
+
+.sign-in-google:hover,
+#btnlog:hover {
+  background-color: #005a80;
+  color: #fff;
+}
+
+.sign-in-google:active,
+#btnlog:active {
+  background-color: #008cba;
+  border: 2px solid #008cba;
+  color: #fff;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.user-table th,
+.user-table td {
+  padding: 8px;
+  border: 1px solid yellow;
+  text-align: left;
+}
+
+.user-table th {
+  background-color: goldenrod;
+  font-size: 18px;
+}

@@ -1,4 +1,4 @@
-### TreasureHunt
+# TreasureHunt
 
 This project is a Treasue Hunt game that assesses users soft skills and problem-solving abilities. It contains several challenges that require you to think outside the box and come up with creative solutions to progress through the levels. 
 

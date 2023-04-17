@@ -168,13 +168,10 @@ async function addUserIdToFirestore(uid) {
     }
 }
 
-window.addEventListener("DOMContentLoaded", (event) => {
-    event.preventDefault;
-    const loginButton = document.getElementById('login');
-    if (loginButton) {
+const loginButton = document.getElementById('login');
+  if (loginButton) {
         loginButton.addEventListener('click', handleLogin);
-    }
-});
+  }
 
 async function updateVal(val) {
     alert('Correct Answer!!');

@@ -18,10 +18,10 @@ There are several ways to solve the puzzle, and the game provides multiple paths
 ## Setting Up the Project
 To set up the project, follow these steps:
 
-  1. Clone the repository from GitHub.
-  2. Install the required dependencies for your chosen language and framework.
-  3. Run the project using the command npm start.
-  4. The application will start running on your local server.
+  >1. Clone the repository from GitHub.
+  >2. Install the required dependencies for your chosen language and framework.
+  >3. Run the project using the command npm start.
+  >4. The application will start running on your local server.
   
 ## Implemented Features
 The following features have been implemented in the project:
@@ -34,17 +34,18 @@ The following features have been implemented in the project:
 6. State saved on refresh or logout
 7. Authentication from Google
 
-##Method of Deployment
+## Method of Deployment
 The application has been developed using the following steps:
 
   1. A **Firebase's cloud Firestore** project was created to store and fetch data, so that user progress can be saved.
   2. *index.html* was created to design the frontend part.
   3. *myScript.js* contains methods for user login, CRUD operations, and answer verifier. An emailID and password method is created for adminlogin. 
   >email: admin@me.com
+  
   >password: admin123
   4. Necessary .CSS files are also there.
 
-#Deployment
+# Deployment
 The final application hasalso been deployed to Heroku, a cloud-hosting website. You can access the deployed application at the following link: [Heroku](https://stunning-souffle-666d7b.netlify.app/)
 
 

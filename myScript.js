@@ -43,15 +43,6 @@ signIn.addEventListener("submit", function (e) {
         });
 });
 
-// async function adminPage() {
-//     const querySnapshot = await getDocs(collection(db, "users"));
-
-//     querySnapshot.forEach((doc) => {
-//         // doc.data() is never undefined for query doc snapshots
-//         console.log(doc.id, " => ", doc.data());
-//     });
-// }
-
 
 async function adminPage() {
     const querySnapshot = await getDocs(collection(db, "users"));
@@ -93,10 +84,6 @@ async function adminPage() {
     container.innerHTML = "";
     container.appendChild(table);
 }
-
-
-
-
 
 
 
@@ -161,6 +148,7 @@ async function addUserIdToFirestore(uid) {
                 break;
             case 5:
                 div6.style.display = "block"; // Show the next div with the form
+                playAgain.style.display = "block";
                 break;
             default:
                 console.error(`Unknown level: ${currentLevel}`);
@@ -169,9 +157,9 @@ async function addUserIdToFirestore(uid) {
 }
 
 const loginButton = document.getElementById('login');
-  if (loginButton) {
-        loginButton.addEventListener('click', handleLogin);
-  }
+if (loginButton) {
+    loginButton.addEventListener('click', handleLogin);
+}
 
 async function updateVal(val) {
     alert('Correct Answer!!');
@@ -183,10 +171,8 @@ async function updateVal(val) {
             await setDoc(userDocRef, {
                 uid: uuid,
                 level: val,
-                createdAt: uuid.createdAt,
                 finishedAt: serverTimestamp()
             });
-            alert("Thank you for playing.")
         }
         else {
             await setDoc(userDocRef, {
@@ -196,6 +182,17 @@ async function updateVal(val) {
             });
         }
     }
+}
+
+async function resetLevelforReplay() {
+    const userDocRef = doc(db, "users", uuid);
+    const userDoc = await getDoc(userDocRef);
+    await setDoc(userDocRef, {
+        uid: uuid,
+        level: 0,
+        status: "replay"
+    })
+    window.location.reload();
 }
 
 // Get the first form element
@@ -289,6 +286,7 @@ form5.addEventListener("submit", function (event) {
         var div6 = document.getElementById("div6");
         div5.style.display = "none"; // Show the next div with the form
         div6.style.display = "block"; // Show the next div with the form
+        playAgain.style.display = "block"; // Show the next div with the form
         updateVal(5);
     }
     else if (answer5 === fixedValue2) {
@@ -298,3 +296,17 @@ form5.addEventListener("submit", function (event) {
         alert('Wrong Answer. Try Again! \n(Remember answer is in lowercase)');
     }
 });
+
+
+//replay
+var replay = document.getElementById("playAgain");
+// Add an event listener to the submit button
+replay.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+    resetLevelforReplay();
+});
+
+
+
+// createdOn:17Apr@2023
+// contact: @parag263

@@ -19,8 +19,8 @@ There are several ways to solve the puzzle, and the game provides multiple paths
 To set up the project, follow these steps:
 
   >1. Clone the repository from GitHub.
-  >2. Install the required dependencies for your chosen language and framework.
-  >3. Run the project using the command npm start.
+  >2. Create your own Firebase project and, then create an app.
+  >3. Use Config files provided to you and add them to the myScript.js.
   >4. The application will start running on your local server.
   
 ## Implemented Features

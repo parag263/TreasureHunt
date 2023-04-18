@@ -8,19 +8,6 @@ body {
 }
 
 /* Style for the loginContainer */
-/* .loginContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #333;
-  border-radius: 20px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  margin: 100px;
-  padding: 20px;
-  width: 400px;
-} */
-
 #signin-form {
   display: flex;
   flex-direction: column;
@@ -29,10 +16,10 @@ body {
   background-color: #333;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
-  margin: 100px;
   padding: 20px;
-  margin-left: 35%;
   width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .loginContainer p {
@@ -64,6 +51,7 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+
 .sign-in-google:hover,
 #btnlog:hover {
   background-color: #005a80;
@@ -75,12 +63,20 @@ body {
 }
 
 /* Style for the formContainer */
-.formContainer {
+/* .formContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin: 20px;
+} */
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
 .formContainer img {
@@ -89,10 +85,11 @@ body {
   margin-bottom: 10px;
 }
 
-p{
-  font-family: 'Courier New', Courier, monospace;
+p {
+  font-family: "Courier New", Courier, monospace;
 }
 
+/* Style for the forms */
 #form1,
 #form2,
 #form3,
@@ -109,21 +106,6 @@ p{
   width: 450px;
 }
 
-#form1 button,
-#form2 button,
-#form3 button,
-#form4 button,
-#form5 button {
-  margin-top: 10px;
-  padding: 10px 20px;
-  background-color: #008cba;
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  border: none;
-  border-radius: 5px;
-}
-
 #form1 input,
 #form2 input,
 #form3 input,
@@ -138,32 +120,23 @@ p{
   color: #333;
 }
 
-#form1:hover,
-#form2:hover,
-#form3:hover,
-#form4:hover,
-#form5:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
-  transition: box-shadow 0.3s ease-in-out;
-}
-
-button[type="submit"]:hover {
-  transform: scale(1.1);
-}
-
-.sign-in-google:hover,
-#btnlog:hover {
-  background-color: #005a80;
-  color: #fff;
-}
-
-.sign-in-google:active,
-#btnlog:active {
+#form1 button,
+#form2 button,
+#form3 button,
+#form4 button,
+#form5 button,
+#playAgain {
+  margin-top: 10px;
+  padding: 10px 20px;
   background-color: #008cba;
-  border: 2px solid #008cba;
   color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
 }
 
+/* Style for table */
 .user-table {
   width: 100%;
   border-collapse: collapse;
@@ -178,4 +151,83 @@ button[type="submit"]:hover {
 .user-table th {
   background-color: goldenrod;
   font-size: 18px;
+}
+
+#playAgain {
+  display: none;
+  margin-top: 50px;
+  padding: 10px 20px;
+  background-color: red;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+}
+
+#playAgain:hover {
+  background-color: #005a80;
+  color: #fff;
+}
+
+#playAgain:active {
+  background-color: #008cba;
+  border: 2px solid #008cba;
+  color: #fff;
+}
+
+/* Media queries for responsive design */
+@media only screen and (max-width: 768px) {
+  #form1,
+  #form2,
+  #form3,
+  #form4,
+  #form5 {
+    width: 90%;
+  }
+
+  #form1 button,
+  #form2 button,
+  #form3 button,
+  #form4 button,
+  #form5 button,
+  #playAgain {
+    width: 100%;
+  }
+  #signin-form {
+    width: 90%;
+    margin: 50px auto;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  #signin-form {
+    width: 100%;
+    margin: 20px auto;
+  }
+
+  #signup-email,
+  #signup-password {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  #form1,
+  #form2,
+  #form3,
+  #form4,
+  #form5 {
+    padding: 10px;
+  }
+
+  #form1 button,
+  #form2 button,
+  #form3 button,
+  #form4 button,
+  #form5 button,
+  #playAgain {
+    padding: 8px;
+    font-size: 14px;
+  }
 }
